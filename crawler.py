@@ -30,6 +30,10 @@ class MtG_Browser:
                                'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
 
     def grab_themes(self):
+        '''
+        crawls through every theme
+        :return:
+        '''
         dl = self.br.open('https://mtgdecks.net/Pauper')
         # crawl themes --> https://mtgdecks.net/Pauper
         html = self.br.response().read()
@@ -53,6 +57,12 @@ class MtG_Browser:
         # print(table_text)
 
     def grab_decks(self, theme_url, index):
+        '''
+        crawls through every deck
+        :param theme_url: url to every theme
+        :param index: current page (iterates through all decks per theme)
+        :return:
+        '''
         # crawl individual decks --> https://mtgdecks.net/Pauper/mono-black-control
 
         dl = self.br.open(theme_url + '/page:' + str(index + 1))
@@ -85,17 +95,24 @@ class MtG_Browser:
             self.grab_decks(theme_url, index + 1)
 
     def grab_cards(self, url):
+        '''
+        grabs the cards in a deck
+        :param url: url to deck
+        :return:
+        '''
         dl = self.br.open(url)
         html = self.br.response().read()
         parsed_html = BeautifulSoup(html)
+        # not all cards are in arena
+        cards = parsed_html.body.find(class_="wholeDeck")
+        cards_text = str(cards)
 
-        cards = parsed_html.body.find(id="arena_deck")
-        cards = str(cards)
+        card = cards.find_all(class_='cardItem')
 
-        cards = cards.replace('<textarea id="arena_deck" rows="15">', '')
-        cards = cards.replace('</textarea>', '')
+        for c in card:
+            print(c['data-required'], c['data-card-id'])
 
-        print(cards)
+
 
 
 if __name__ == "__main__":
