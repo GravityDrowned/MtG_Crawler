@@ -80,6 +80,7 @@ Crawler extract of mono black control decks:
 
 <details><summary>https://mtgdecks.net/Pauper/monoblack02-decklist-by-jesy-1154493</summary>
 <p>
+
 * 1 Crypt Rats                       
 * 2 Thorn of the Black Rose  
 * 3 Cuombajj Witches  
@@ -114,6 +115,7 @@ Crawler extract of mono black control decks:
 <details><summary> https://mtgdecks.net/Pauper/mbc-decklist-by-asley-1154079
    </summary>
 <p>
+
 * 4 Gray Merchant of Asphodel
 * 4 Thorn of the Black Rose
 * 4 Bone Picker
@@ -134,11 +136,14 @@ Crawler extract of mono black control decks:
 * 3 Nihil Spellbomb
 * 3 Eyeblight Massacre
 </p>
+</details>
+
 
 <details><summary>  https://mtgdecks.net/Pauper/mbc-decklist-by-edu28-1154084
   </summary>
 <p>
-* 1 Crypt Rats
+
+* 1 Crypt Rats  
 * 3 Thorn of the Black Rose
 * 4 Gray Merchant of Asphodel
 * 4 Phyrexian Rager
@@ -164,6 +169,7 @@ Crawler extract of mono black control decks:
 * 2 Geth's Verdict
 * 2 Duress
 </p>
+</details>
 
 
 
