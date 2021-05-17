@@ -111,6 +111,7 @@ class MtG_Browser:
 
         for c in card:
             print(c['data-required'], c['data-card-id'])
+            # ToDo: check if cards are in collection
 
 
 
